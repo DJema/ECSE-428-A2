@@ -1,0 +1,4 @@
+[0226/223327.753:ERROR:file_io.cc(134)] WriteFile: There is not enough space on the disk. (0x70)
+[0226/223327.754:ERROR:crash_report_exception_handler.cc(111)] WriteEverything failed
+[0226/223327.755:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\Rami\AppData\Local\Temp\scoped_dir15712_17235\Crashpad\reports\132f410f-8b87-4491-9024-832e445cc027.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0226/223420.201:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\Rami\AppData\Local\Temp\scoped_dir16252_23646\Crashpad\reports\6ac03a78-7e98-4d95-9526-6df48fea6ecd.dmp: The process cannot access the file because it is being used by another process. (0x20)
