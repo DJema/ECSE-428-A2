@@ -1,0 +1,22 @@
+Feature: gmail
+
+  Scenario: Send email on google chrome with attachment
+    Given I am logged in to gmail on my homepage
+    When I click on Compose
+    And I add a recipient to my message
+    And I add a subject to my message
+    And I add an attachment to my message
+    And I click Send
+    Then the recipient receives the message with the right object and attachment
+    
+  Scenario: Send email on google chrome with different attachment and object
+    Given I am logged in to gmail on my homepage
+    When I click on Compose
+    And I add a different recipient to my message
+    And I add a different subject to my message
+    And I add a different attachment to my message
+    And I click Send
+    Then the recipient receives the message with the right object and attachment
+
+
+

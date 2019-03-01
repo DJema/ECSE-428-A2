@@ -1,0 +1,9 @@
+Feature: gmail
+
+  Scenario: Open Chrome
+    Given I am lord
+    When I lord
+    Then google opens
+
+
+

@@ -1,0 +1,11 @@
+package test.java.com.ecse428.cucumber;
+
+import org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+
+@CucumberOptions(features = "src.test.resources",
+				 glue = "src.test.java.com.ecse428.cucumber"
+		) 
+
+public class runTest { }

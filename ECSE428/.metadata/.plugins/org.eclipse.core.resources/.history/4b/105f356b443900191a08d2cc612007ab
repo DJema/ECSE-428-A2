@@ -1,0 +1,12 @@
+Feature: gmail
+
+  Scenario: Open Chrome
+    Given I am logged in to gmail on my homepage
+    When I send I click on "Compose"
+    And I add a recepient to my message
+    And I add an attachment to my message
+    And I click "Send"
+    Then the recepient receives the message with the attachment
+
+
+
