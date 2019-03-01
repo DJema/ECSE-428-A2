@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="libs/cucumber/cucumber-junit-4.2.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="libs/client-combined-3.141.59-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/client-combined-3.141.59.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/libs/byte-buddy-1.8.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/libs/commons-exec-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/libs/guava-25.0-jre.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/libs/okhttp-3.11.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/libs/okio-1.14.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber/cobertura-2.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber/cucumber-core-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber/cucumber-java-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber/cucumber-jvm-deps-1.0.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber/cucumber-reporting-4.4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber/junit-4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/cucumber/mockito-all-2.0.2-beta.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="libs/cucumber/gherkin-2.12.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
