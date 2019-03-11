@@ -37,7 +37,7 @@ public class SendEmailWithAttachmentStepDefinitions {
 		// Randomly generate an subject string to send
         String alphanumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder sb = new StringBuilder();
-        Random rnd = new Random();
+        Random rnd = new Random( );
         while (sb.length() < 20) { // length of the random string.
             int index = (int) (rnd.nextFloat() * alphanumeric.length());
             sb.append(alphanumeric.charAt(index));
@@ -65,8 +65,8 @@ public class SendEmailWithAttachmentStepDefinitions {
 		
 	}
 	
-	//@When("^I click on compose$")
-	public static void whenIClickOnCompose() {
+	//@When("^When I compose an email$")
+	public static void whenIComposeAnEmail() {
 		
 		WebElement compose = driver.findElement(By.className("z0"));
 		compose.click();
@@ -149,8 +149,8 @@ public class SendEmailWithAttachmentStepDefinitions {
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
-	//@And(^I click Send$)
-	public static void andIclickSend() {
+	//@And(^I send the email$)
+	public static void andISendTheEmail() {
 		
 		WebElement sendButton = driver.findElement(By.xpath("//div[text()='Send']"));
 		sendButton.click();
@@ -317,18 +317,18 @@ public class SendEmailWithAttachmentStepDefinitions {
 		assertTrue(driver.getPageSource().contains("no subject"));
 	}
 	
-	//The tests begin here. Since we were unable to configure cucumber, we had to manually write down the tests
-	//step by step so that they can be run as JUnit tests, rather than cucumber gluing them to the methods.
+	/*The tests begin here. Since we were unable to configure cucumber, we had to manually write down the tests
+	step by step so that they can be run as JUnit tests, rather than cucumber gluing them to the methods.*/
 	
 	@Test
 	public void normalFlowTest1() throws Exception {
 		
 		givenIAmLoggedInToMyGmailOnMyHomepage();
-		whenIClickOnCompose();
+		whenIComposeAnEmail();
 		andIAddARecipientToMyMessage();
 		andIAddASubjectToMyMessage();
 		andIAddAnAttachmentToMyMessage();
-		andIclickSend();
+		andISendTheEmail();
 		thenTheRecipientReceivesTheMessageWithTheRightSubjectAndAttachment();
 		
 	}
@@ -338,11 +338,11 @@ public class SendEmailWithAttachmentStepDefinitions {
 	public void normalFlowTest2() throws Exception {
 		
 		givenIAmLoggedInToMyGmailOnMyHomepage();
-		whenIClickOnCompose();
+		whenIComposeAnEmail();
 		andIAddADifferentRecipientToMyMessage();
 		andIAddASubjectToMyMessage();
 		andIAddADifferentAttachmentToMyMessage();
-		andIclickSend();
+		andISendTheEmail();
 		thenTheRecipientReceivesTheMessageWithTheRightSubjectAndAttachment();
 		
 	}
@@ -351,10 +351,10 @@ public class SendEmailWithAttachmentStepDefinitions {
 	public void alternateFlowTest() throws Exception {
 		
 		givenIAmLoggedInToMyGmailOnMyHomepage();
-		whenIClickOnCompose();
+		whenIComposeAnEmail();
 		andIAddARecipientToMyMessage();
 		andIAddAnAlternateAttachmentToMyMessage();
-		andIclickSend();
+		andISendTheEmail();
 		andIAcceptThePromptWindow();
 		thenTheRecipientReceivesTheMessageWithNoSubjectAndAnAttachment();
 		
@@ -364,10 +364,10 @@ public class SendEmailWithAttachmentStepDefinitions {
 	public void errorFlow1() throws Exception{
 		
 		givenIAmLoggedInToMyGmailOnMyHomepage();
-		whenIClickOnCompose();
+		whenIComposeAnEmail();
 		andIAddASubjectToMyMessage();
 		andIAddAnAttachmentToMyMessage();
-		andIclickSend();
+		andISendTheEmail();
 		thenAnErrorMessageIsDisplayedSpecifyingToAddARecipient();
 		
 	}
@@ -376,7 +376,7 @@ public class SendEmailWithAttachmentStepDefinitions {
 	public void errorFlow2() throws Exception{
 		
 		givenIAmLoggedInToMyGmailOnMyHomepage();
-		whenIClickOnCompose();
+		whenIComposeAnEmail();
 		andIAddARecipientToMyMessage();
 		andIAddASubjectToMyMessage();
 		andIAddALargeAttachmentToMyMessage();
